@@ -1,7 +1,9 @@
 #! /usr/bin/env python3
 
 import sys
+import logging
 
 if __name__ == '__main__':
-    print('Starting', sys.argv[0], '...')
-    print('Finish', sys.argv[0])
+    appname = sys.argv[0]
+    logging.warning("Starting {} ...".format(appname))
+    logging.warning("Finish {}".format(appname))
