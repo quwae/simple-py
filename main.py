@@ -1,10 +1,10 @@
 #! /usr/bin/env python3
 
 import sys
-import logger
+import mylogging
 
 if __name__ == '__main__':
     appname = sys.argv[0]
-    logger.init()
-    logger.warning("Starting {} ...".format(appname))
-    logger.warning("Finish {}".format(appname))
+    mylogging.init()
+    mylogging.warning("Starting {} ...".format(appname))
+    mylogging.warning("Finish {}".format(appname))
