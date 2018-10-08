@@ -3,20 +3,9 @@
 import logging
 
 def init(filename='logfile.txt',level=logging.DEBUG):
-    logging.basicConfig(filename=filename,level=level,format='%(asctime)s %(message)s')
+    logging.basicConfig(filename=filename,level=level,
+                        format='%(asctime)s %(levelname)s %(name)s %(message)s')
 
-def debug(msg):
-    logging.debug(msg)
-
-def info(msg):
-    logging.info(msg)
-
-def warning(msg):
-    logging.warning(msg)
-
-def error(msg):
-    logging.error(msg)
-
-def critical(msg):
-    logging.critical(msg)
+def getLogger(name):
+    return logging.getLogger(name)
 

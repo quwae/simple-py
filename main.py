@@ -3,8 +3,10 @@
 import sys
 import mylogging
 
+mylogging.init()
+logger = mylogging.getLogger(__name__)
+
 if __name__ == '__main__':
     appname = sys.argv[0]
-    mylogging.init()
-    mylogging.warning("Starting {} ...".format(appname))
-    mylogging.warning("Finish {}".format(appname))
+    logger.warning("Starting {} ...".format(appname))
+    logger.warning("Finish {}".format(appname))
